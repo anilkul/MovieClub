@@ -32,7 +32,7 @@ class HomePageProvider: HomePageProviderProtocol {
   }
   
   func searchForMovie(with title: String, on page: Int) {
-    networkManager.requestSearch(for: title, onPage: page) { [weak self] (requestResult) in
+    networkManager.requestSearch(for: title, on: page) { [weak self] (requestResult) in
       guard let self = self else { return }
       switch requestResult {
       case .success(let movieSearchResponseModel):

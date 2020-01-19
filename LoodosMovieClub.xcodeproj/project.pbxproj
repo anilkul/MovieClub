@@ -30,6 +30,9 @@
 		4EB4DACC23D487D700573589 /* SearchedMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DACB23D487D600573589 /* SearchedMovie.swift */; };
 		4EB4DAD423D4B07200573589 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAD323D4B07200573589 /* RequestResult.swift */; };
 		4EB4DAD823D4BB9F00573589 /* FailedResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAD723D4BB9F00573589 /* FailedResponseModel.swift */; };
+		4EB4DADC23D4C56400573589 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DADB23D4C56400573589 /* MovieCellViewModel.swift */; };
+		4EB4DADE23D4C59A00573589 /* SearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DADD23D4C59A00573589 /* SearchListViewModel.swift */; };
+		4EB4DAE023D4C7AB00573589 /* MovieCellPlaceholderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DADF23D4C7AA00573589 /* MovieCellPlaceholderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		4EB4DACB23D487D600573589 /* SearchedMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedMovie.swift; sourceTree = "<group>"; };
 		4EB4DAD323D4B07200573589 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		4EB4DAD723D4BB9F00573589 /* FailedResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedResponseModel.swift; sourceTree = "<group>"; };
+		4EB4DADB23D4C56400573589 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
+		4EB4DADD23D4C59A00573589 /* SearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewModel.swift; sourceTree = "<group>"; };
+		4EB4DADF23D4C7AA00573589 /* MovieCellPlaceholderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellPlaceholderViewModel.swift; sourceTree = "<group>"; };
 		CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosMovieClub.debug.xcconfig"; path = "Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -235,7 +241,8 @@
 		4EB4DABE23D46FCF00573589 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				4EB4DABF23D46FE100573589 /* HomeViewModel.swift */,
+				4EB4DADA23D4C55300573589 /* Cell View Models */,
+				4EB4DAD923D4C4C700573589 /* Main View Models */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -256,6 +263,24 @@
 				4EB4DAD723D4BB9F00573589 /* FailedResponseModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4EB4DAD923D4C4C700573589 /* Main View Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DABF23D46FE100573589 /* HomeViewModel.swift */,
+			);
+			path = "Main View Models";
+			sourceTree = "<group>";
+		};
+		4EB4DADA23D4C55300573589 /* Cell View Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DADB23D4C56400573589 /* MovieCellViewModel.swift */,
+				4EB4DADD23D4C59A00573589 /* SearchListViewModel.swift */,
+				4EB4DADF23D4C7AA00573589 /* MovieCellPlaceholderViewModel.swift */,
+			);
+			path = "Cell View Models";
 			sourceTree = "<group>";
 		};
 		7C5BC53D183DBD3BA39D0761 /* Pods */ = {
@@ -394,6 +419,8 @@
 				4EB4DACA23D4877700573589 /* MovieSearchResponseModel.swift in Sources */,
 				4EB4DAC223D4706900573589 /* NetworkManager.swift in Sources */,
 				4EB4DAAB23D468B900573589 /* RemoteConfigValues.swift in Sources */,
+				4EB4DAE023D4C7AB00573589 /* MovieCellPlaceholderViewModel.swift in Sources */,
+				4EB4DADC23D4C56400573589 /* MovieCellViewModel.swift in Sources */,
 				4EB4DAC023D46FE100573589 /* HomeViewModel.swift in Sources */,
 				4E350D2223D4594A001A1D1E /* SplashViewController.swift in Sources */,
 				4E350D1E23D4594A001A1D1E /* AppDelegate.swift in Sources */,
@@ -401,6 +428,7 @@
 				4EB4DAC423D470B300573589 /* HomePageProvider.swift in Sources */,
 				4E350D2023D4594A001A1D1E /* SceneDelegate.swift in Sources */,
 				4EB4DAD823D4BB9F00573589 /* FailedResponseModel.swift in Sources */,
+				4EB4DADE23D4C59A00573589 /* SearchListViewModel.swift in Sources */,
 				4EB4DAD423D4B07200573589 /* RequestResult.swift in Sources */,
 				4EB4DABA23D46DA900573589 /* HomeViewController.swift in Sources */,
 				4EB4DAC723D4714400573589 /* HomeParser.swift in Sources */,
