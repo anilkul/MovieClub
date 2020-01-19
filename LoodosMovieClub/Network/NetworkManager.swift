@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 protocol NetworkManagerProtocol {
-  func requestSearch(for movieTitle: String, onPage page: Int, completion: @escaping (RequestResult<MovieSearchResponseModel, CustomError>) -> Void)
+  func requestSearch(for movieTitle: String, on page: Int, completion: @escaping (RequestResult<MovieSearchResponseModel, CustomError>) -> Void)
 }
 
 final class NetworkManager: NetworkManagerProtocol {
@@ -26,11 +26,11 @@ final class NetworkManager: NetworkManagerProtocol {
   private let defaultParams: [String: Any] = ["apikey": "295c53d4"]
   private let decoder = JSONDecoder()
   
-  func requestSearch(for movieTitle: String, onPage page: Int, completion: @escaping (RequestResult<MovieSearchResponseModel, CustomError>) -> Void) {
+  func requestSearch(for movieTitle: String, on page: Int, completion: @escaping (RequestResult<MovieSearchResponseModel, CustomError>) -> Void) {
     let params: [String: Any] = ["s": movieTitle, "page": page]
     let mergedParams = params.merging(defaultParams) { $1 }
     
-    Alamofire.request(Constants.URLStrings.baseURLString, method: .get, parameters: mergedParams, encoding: URLEncoding.default).responseJSON { (response) in
+    Alamofire.request(Constants.URLStrings.baseURLString, method: .get, parameters: mergedParams, encoding: URLEncoding.default).responseJSON { [unowned self] (response) in
       guard response.result.isSuccess else {
         completion(.failure(.responseFailure))
         return

@@ -15,9 +15,10 @@ class HomeViewController: UIViewController {
   
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var tableView: UITableView!
-  private let decoder = JSONDecoder()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
 //    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
 //      self.dismiss(animated: true)
 //    }
