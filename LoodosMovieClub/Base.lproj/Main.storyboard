@@ -14,14 +14,51 @@
                     <view key="view" contentMode="scaleToFill" id="nIe-5R-HEY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xo5-XA-Bh6">
+                                <rect key="frame" x="0.0" y="10" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.062745098040000002" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CIU-Lb-dJd"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-5z-R4o">
+                                <rect key="frame" x="0.0" y="54" width="375" height="613"/>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.062745098040000002" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykA-65-wlF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="10"/>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.062745098040000002" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="R9U-JO-D7I"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="N5H-Ge-khI" firstAttribute="trailing" secondItem="ykA-65-wlF" secondAttribute="trailing" id="1It-XM-Mvk"/>
+                            <constraint firstItem="OpH-5z-R4o" firstAttribute="leading" secondItem="N5H-Ge-khI" secondAttribute="leading" id="BCy-BG-bmj"/>
+                            <constraint firstItem="OpH-5z-R4o" firstAttribute="top" secondItem="Xo5-XA-Bh6" secondAttribute="bottom" id="MA4-fZ-1mT"/>
+                            <constraint firstItem="OpH-5z-R4o" firstAttribute="trailing" secondItem="N5H-Ge-khI" secondAttribute="trailing" id="OOA-fq-TA1"/>
+                            <constraint firstItem="ykA-65-wlF" firstAttribute="top" secondItem="N5H-Ge-khI" secondAttribute="top" id="WLO-LX-xTr"/>
+                            <constraint firstItem="OpH-5z-R4o" firstAttribute="bottom" secondItem="N5H-Ge-khI" secondAttribute="bottom" id="bjv-tQ-HL7"/>
+                            <constraint firstItem="ykA-65-wlF" firstAttribute="leading" secondItem="N5H-Ge-khI" secondAttribute="leading" id="dKo-IW-6zr"/>
+                            <constraint firstItem="Xo5-XA-Bh6" firstAttribute="top" secondItem="ykA-65-wlF" secondAttribute="bottom" id="ecp-UF-2vD"/>
+                            <constraint firstItem="Xo5-XA-Bh6" firstAttribute="leading" secondItem="N5H-Ge-khI" secondAttribute="leading" id="p9R-BJ-n5s"/>
+                            <constraint firstItem="Xo5-XA-Bh6" firstAttribute="trailing" secondItem="N5H-Ge-khI" secondAttribute="trailing" id="rD2-or-0D8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N5H-Ge-khI"/>
                     </view>
                     <navigationItem key="navigationItem" id="WMJ-eM-sWb"/>
+                    <connections>
+                        <outlet property="searchBar" destination="Xo5-XA-Bh6" id="HdA-T6-Qio"/>
+                        <outlet property="tableView" destination="OpH-5z-R4o" id="Xfi-Xh-hkw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2r-eZ-MBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="109"/>
+            <point key="canvasLocation" x="1028" y="108.39580209895054"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="uaV-cu-xtT">

@@ -12,6 +12,9 @@ class HomeViewController: UIViewController {
   
   var manager: HomeManagerProtocol!
   
+  @IBOutlet weak var searchBar: UISearchBar!
+  @IBOutlet weak var tableView: UITableView!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 //    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
