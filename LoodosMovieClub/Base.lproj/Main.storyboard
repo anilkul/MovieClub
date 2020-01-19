@@ -90,7 +90,7 @@
                     <connections>
                         <outlet property="companyNameLabel" destination="B4K-gb-nZL" id="edk-p5-P0y"/>
                         <outlet property="noConnectionStackView" destination="r4t-0U-G8D" id="btT-38-dfz"/>
-                        <segue destination="QVg-KF-T7V" kind="show" id="4RB-z7-6Lk"/>
+                        <segue destination="QVg-KF-T7V" kind="show" identifier="goToHomeScreen" id="4RB-z7-6Lk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rzf-nK-eJ8" sceneMemberID="firstResponder"/>
