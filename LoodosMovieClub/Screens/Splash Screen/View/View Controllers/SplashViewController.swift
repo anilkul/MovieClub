@@ -43,7 +43,8 @@ class SplashViewController: UIViewController {
   
   private func goToHomeScreen() {
     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-      self.performSegue(withIdentifier: "goToHomeScreen", sender: nil)
+      let homeViewController = ViewControllerMaker.homeViewController()
+      self.show(homeViewController, sender: nil)
     }
   }
   

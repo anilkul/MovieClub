@@ -1,0 +1,21 @@
+//
+//  HomeViewController.swift
+//  LoodosMovieClub
+//
+//  Created by Mehmet Anıl Kul on 19.01.2020.
+//  Copyright © 2020 Mehmet Anıl Kul. All rights reserved.
+//
+
+import UIKit
+
+class HomeViewController: UIViewController {
+  
+  var manager: HomeManagerProtocol!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//      self.dismiss(animated: true)
+//    }
+  }
+}

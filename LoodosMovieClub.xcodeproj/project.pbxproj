@@ -19,6 +19,13 @@
 		4EB4DAAB23D468B900573589 /* RemoteConfigValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAAA23D468B900573589 /* RemoteConfigValues.swift */; };
 		4EB4DAAE23D468DC00573589 /* DebugOnlyPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAAD23D468DC00573589 /* DebugOnlyPrint.swift */; };
 		4EB4DAB123D4691800573589 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAB023D4691800573589 /* Constants.swift */; };
+		4EB4DAB423D46D1100573589 /* ViewControllerMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAB323D46D1100573589 /* ViewControllerMaker.swift */; };
+		4EB4DABA23D46DA900573589 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAB923D46DA900573589 /* HomeViewController.swift */; };
+		4EB4DABD23D46F4200573589 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DABC23D46F4200573589 /* HomeManager.swift */; };
+		4EB4DAC023D46FE100573589 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DABF23D46FE100573589 /* HomeViewModel.swift */; };
+		4EB4DAC223D4706900573589 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAC123D4706900573589 /* NetworkManager.swift */; };
+		4EB4DAC423D470B300573589 /* HomePageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAC323D470B300573589 /* HomePageProvider.swift */; };
+		4EB4DAC723D4714400573589 /* HomeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAC623D4714400573589 /* HomeParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +44,13 @@
 		4EB4DAAA23D468B900573589 /* RemoteConfigValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigValues.swift; sourceTree = "<group>"; };
 		4EB4DAAD23D468DC00573589 /* DebugOnlyPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugOnlyPrint.swift; sourceTree = "<group>"; };
 		4EB4DAB023D4691800573589 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4EB4DAB323D46D1100573589 /* ViewControllerMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMaker.swift; sourceTree = "<group>"; };
+		4EB4DAB923D46DA900573589 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4EB4DABC23D46F4200573589 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		4EB4DABF23D46FE100573589 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4EB4DAC123D4706900573589 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4EB4DAC323D470B300573589 /* HomePageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProvider.swift; sourceTree = "<group>"; };
+		4EB4DAC623D4714400573589 /* HomeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParser.swift; sourceTree = "<group>"; };
 		CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosMovieClub.debug.xcconfig"; path = "Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +106,7 @@
 		4E350D3123D45EC5001A1D1E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4EB4DAB523D46D6100573589 /* Home Screen */,
 				4E350D3223D45ED1001A1D1E /* Splash Screen */,
 			);
 			path = Screens;
@@ -109,7 +124,7 @@
 		4E350D3323D45EDC001A1D1E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4E350D2123D4594A001A1D1E /* SplashViewController.swift */,
+				4EB4DAB823D46D7E00573589 /* View Controllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				4EB4DAA923D4687300573589 /* Firebase */,
+				4EB4DAC123D4706900573589 /* NetworkManager.swift */,
+				4EB4DAC323D470B300573589 /* HomePageProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -149,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				4EB4DAAD23D468DC00573589 /* DebugOnlyPrint.swift */,
+				4EB4DAB323D46D1100573589 /* ViewControllerMaker.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -159,6 +177,65 @@
 				4EB4DAB023D4691800573589 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		4EB4DAB523D46D6100573589 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DABE23D46FCF00573589 /* View Model */,
+				4EB4DABB23D46F3100573589 /* General */,
+				4EB4DAB623D46D6B00573589 /* View */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		4EB4DAB623D46D6B00573589 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DAB723D46D7100573589 /* View Controllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EB4DAB723D46D7100573589 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DAB923D46DA900573589 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4EB4DAB823D46D7E00573589 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E350D2123D4594A001A1D1E /* SplashViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4EB4DABB23D46F3100573589 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DAC523D4712B00573589 /* Parsers */,
+				4EB4DABC23D46F4200573589 /* HomeManager.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		4EB4DABE23D46FCF00573589 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DABF23D46FE100573589 /* HomeViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		4EB4DAC523D4712B00573589 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DAC623D4714400573589 /* HomeParser.swift */,
+			);
+			path = Parsers;
 			sourceTree = "<group>";
 		};
 		7C5BC53D183DBD3BA39D0761 /* Pods */ = {
@@ -294,10 +371,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB4DAC223D4706900573589 /* NetworkManager.swift in Sources */,
 				4EB4DAAB23D468B900573589 /* RemoteConfigValues.swift in Sources */,
+				4EB4DAC023D46FE100573589 /* HomeViewModel.swift in Sources */,
 				4E350D2223D4594A001A1D1E /* SplashViewController.swift in Sources */,
 				4E350D1E23D4594A001A1D1E /* AppDelegate.swift in Sources */,
+				4EB4DAB423D46D1100573589 /* ViewControllerMaker.swift in Sources */,
+				4EB4DAC423D470B300573589 /* HomePageProvider.swift in Sources */,
 				4E350D2023D4594A001A1D1E /* SceneDelegate.swift in Sources */,
+				4EB4DABA23D46DA900573589 /* HomeViewController.swift in Sources */,
+				4EB4DAC723D4714400573589 /* HomeParser.swift in Sources */,
+				4EB4DABD23D46F4200573589 /* HomeManager.swift in Sources */,
 				4EB4DAB123D4691800573589 /* Constants.swift in Sources */,
 				4E350D3623D45F04001A1D1E /* SplashViewModel.swift in Sources */,
 				4EB4DAAE23D468DC00573589 /* DebugOnlyPrint.swift in Sources */,
