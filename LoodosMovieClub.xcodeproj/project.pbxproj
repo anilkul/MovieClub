@@ -31,8 +31,11 @@
 		4EB4DAD423D4B07200573589 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAD323D4B07200573589 /* RequestResult.swift */; };
 		4EB4DAD823D4BB9F00573589 /* FailedResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAD723D4BB9F00573589 /* FailedResponseModel.swift */; };
 		4EB4DADC23D4C56400573589 /* MovieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DADB23D4C56400573589 /* MovieCellViewModel.swift */; };
-		4EB4DADE23D4C59A00573589 /* SearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DADD23D4C59A00573589 /* SearchListViewModel.swift */; };
+		4EB4DADE23D4C59A00573589 /* SearchListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DADD23D4C59A00573589 /* SearchListCellViewModel.swift */; };
 		4EB4DAE023D4C7AB00573589 /* MovieCellPlaceholderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DADF23D4C7AA00573589 /* MovieCellPlaceholderViewModel.swift */; };
+		4EB4DAE823D4C8CD00573589 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAE723D4C8CD00573589 /* BaseCell.swift */; };
+		4EB4DAEB23D4CAAF00573589 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAE923D4CAAF00573589 /* MovieCell.swift */; };
+		4EB4DAEC23D4CAAF00573589 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EB4DAEA23D4CAAF00573589 /* MovieCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,8 +66,11 @@
 		4EB4DAD323D4B07200573589 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
 		4EB4DAD723D4BB9F00573589 /* FailedResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedResponseModel.swift; sourceTree = "<group>"; };
 		4EB4DADB23D4C56400573589 /* MovieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellViewModel.swift; sourceTree = "<group>"; };
-		4EB4DADD23D4C59A00573589 /* SearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListViewModel.swift; sourceTree = "<group>"; };
+		4EB4DADD23D4C59A00573589 /* SearchListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListCellViewModel.swift; sourceTree = "<group>"; };
 		4EB4DADF23D4C7AA00573589 /* MovieCellPlaceholderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellPlaceholderViewModel.swift; sourceTree = "<group>"; };
+		4EB4DAE723D4C8CD00573589 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		4EB4DAE923D4CAAF00573589 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		4EB4DAEA23D4CAAF00573589 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosMovieClub.debug.xcconfig"; path = "Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -208,6 +214,7 @@
 		4EB4DAB623D46D6B00573589 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4EB4DAE123D4C86100573589 /* View Classes */,
 				4EB4DAB723D46D7100573589 /* View Controllers */,
 			);
 			path = View;
@@ -277,10 +284,28 @@
 			isa = PBXGroup;
 			children = (
 				4EB4DADB23D4C56400573589 /* MovieCellViewModel.swift */,
-				4EB4DADD23D4C59A00573589 /* SearchListViewModel.swift */,
+				4EB4DADD23D4C59A00573589 /* SearchListCellViewModel.swift */,
 				4EB4DADF23D4C7AA00573589 /* MovieCellPlaceholderViewModel.swift */,
 			);
 			path = "Cell View Models";
+			sourceTree = "<group>";
+		};
+		4EB4DAE123D4C86100573589 /* View Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DAE223D4C86E00573589 /* Cell Classes */,
+			);
+			path = "View Classes";
+			sourceTree = "<group>";
+		};
+		4EB4DAE223D4C86E00573589 /* Cell Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DAE723D4C8CD00573589 /* BaseCell.swift */,
+				4EB4DAE923D4CAAF00573589 /* MovieCell.swift */,
+				4EB4DAEA23D4CAAF00573589 /* MovieCell.xib */,
+			);
+			path = "Cell Classes";
 			sourceTree = "<group>";
 		};
 		7C5BC53D183DBD3BA39D0761 /* Pods */ = {
@@ -364,6 +389,7 @@
 				4EB4DAA623D467B400573589 /* GoogleService-Info.plist in Resources */,
 				4E350D2723D4594E001A1D1E /* Assets.xcassets in Resources */,
 				4E350D2523D4594A001A1D1E /* Main.storyboard in Resources */,
+				4EB4DAEC23D4CAAF00573589 /* MovieCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +445,7 @@
 				4EB4DACA23D4877700573589 /* MovieSearchResponseModel.swift in Sources */,
 				4EB4DAC223D4706900573589 /* NetworkManager.swift in Sources */,
 				4EB4DAAB23D468B900573589 /* RemoteConfigValues.swift in Sources */,
+				4EB4DAE823D4C8CD00573589 /* BaseCell.swift in Sources */,
 				4EB4DAE023D4C7AB00573589 /* MovieCellPlaceholderViewModel.swift in Sources */,
 				4EB4DADC23D4C56400573589 /* MovieCellViewModel.swift in Sources */,
 				4EB4DAC023D46FE100573589 /* HomeViewModel.swift in Sources */,
@@ -428,9 +455,10 @@
 				4EB4DAC423D470B300573589 /* HomePageProvider.swift in Sources */,
 				4E350D2023D4594A001A1D1E /* SceneDelegate.swift in Sources */,
 				4EB4DAD823D4BB9F00573589 /* FailedResponseModel.swift in Sources */,
-				4EB4DADE23D4C59A00573589 /* SearchListViewModel.swift in Sources */,
+				4EB4DADE23D4C59A00573589 /* SearchListCellViewModel.swift in Sources */,
 				4EB4DAD423D4B07200573589 /* RequestResult.swift in Sources */,
 				4EB4DABA23D46DA900573589 /* HomeViewController.swift in Sources */,
+				4EB4DAEB23D4CAAF00573589 /* MovieCell.swift in Sources */,
 				4EB4DAC723D4714400573589 /* HomeParser.swift in Sources */,
 				4EB4DABD23D46F4200573589 /* HomeManager.swift in Sources */,
 				4EB4DAB123D4691800573589 /* Constants.swift in Sources */,

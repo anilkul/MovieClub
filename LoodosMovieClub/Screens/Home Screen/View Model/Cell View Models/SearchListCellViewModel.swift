@@ -1,5 +1,5 @@
 //
-//  SearchListViewModel.swift
+//  SearchListCellViewModel.swift
 //  LoodosMovieClub
 //
 //  Created by Mehmet Anıl Kul on 19.01.2020.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol SearchListViewModelProtocol {
+protocol SearchListCellViewModelProtocol {
   
 }
 
-class SearchListViewModel: SearchListViewModelProtocol {
+class SearchListCellViewModel: SearchListCellViewModelProtocol {
   
 }

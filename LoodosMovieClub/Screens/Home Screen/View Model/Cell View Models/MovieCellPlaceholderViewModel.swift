@@ -12,6 +12,6 @@ protocol MovieCellPlaceholderViewModelProtocol {
 
 }
 
-class MovieCellPlaceholderViewModel: SearchListViewModel, MovieCellPlaceholderViewModelProtocol {
+class MovieCellPlaceholderViewModel: SearchListCellViewModel, MovieCellPlaceholderViewModelProtocol {
   
 }

@@ -16,16 +16,14 @@ protocol MovieCellViewModelProtocol {
   var posterURLString: String { get set }
 }
 
-class MovieCellViewModel: SearchListViewModel, MovieCellViewModelProtocol {
+class MovieCellViewModel: SearchListCellViewModel, MovieCellViewModelProtocol {
   var title: String
   var year: String
   var imdbID: String
   var type: String
   var posterURLString: String
   
-  
   init(title: String, year: String, imdbID: String, type: String, posterURLString: String) {
-    super.init()
     self.title = title
     self.year = year
     self.imdbID = imdbID
