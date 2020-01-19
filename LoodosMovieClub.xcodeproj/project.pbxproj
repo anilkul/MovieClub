@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21A201130D836F801EB98A3B /* Pods_LoodosMovieClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495A0425D8983AAB14485126 /* Pods_LoodosMovieClub.framework */; };
 		4E350D1E23D4594A001A1D1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E350D1D23D4594A001A1D1E /* AppDelegate.swift */; };
 		4E350D2023D4594A001A1D1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E350D1F23D4594A001A1D1E /* SceneDelegate.swift */; };
 		4E350D2223D4594A001A1D1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E350D2123D4594A001A1D1E /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		450D4676AEDA9461FA613160 /* Pods-LoodosMovieClub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosMovieClub.release.xcconfig"; path = "Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub.release.xcconfig"; sourceTree = "<group>"; };
+		495A0425D8983AAB14485126 /* Pods_LoodosMovieClub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoodosMovieClub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E350D1A23D4594A001A1D1E /* LoodosMovieClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosMovieClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E350D1D23D4594A001A1D1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E350D1F23D4594A001A1D1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		4E350D2623D4594E001A1D1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E350D2923D4594E001A1D1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E350D2B23D4594E001A1D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosMovieClub.debug.xcconfig"; path = "Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A201130D836F801EB98A3B /* Pods_LoodosMovieClub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				4E350D1C23D4594A001A1D1E /* LoodosMovieClub */,
 				4E350D1B23D4594A001A1D1E /* Products */,
+				7C5BC53D183DBD3BA39D0761 /* Pods */,
+				B11EBB0F80CB6BC5D7185262 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = LoodosMovieClub;
 			sourceTree = "<group>";
 		};
+		7C5BC53D183DBD3BA39D0761 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */,
+				450D4676AEDA9461FA613160 /* Pods-LoodosMovieClub.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B11EBB0F80CB6BC5D7185262 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				495A0425D8983AAB14485126 /* Pods_LoodosMovieClub.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E350D2E23D4594E001A1D1E /* Build configuration list for PBXNativeTarget "LoodosMovieClub" */;
 			buildPhases = (
+				14FAAE35AF057E541B721C51 /* [CP] Check Pods Manifest.lock */,
 				4E350D1623D4594A001A1D1E /* Sources */,
 				4E350D1723D4594A001A1D1E /* Frameworks */,
 				4E350D1823D4594A001A1D1E /* Resources */,
+				B9F3A16F2B13E208A772CEF2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14FAAE35AF057E541B721C51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoodosMovieClub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9F3A16F2B13E208A772CEF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4E350D1623D4594A001A1D1E /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		4E350D2F23D4594E001A1D1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		4E350D3023D4594E001A1D1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 450D4676AEDA9461FA613160 /* Pods-LoodosMovieClub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
