@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bmg-U5-4Ks">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -8,19 +8,97 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="6BL-vJ-uE4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoodosMovieClub" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController modalPresentationStyle="fullScreen" id="QVg-KF-T7V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIe-5R-HEY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="N5H-Ge-khI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WMJ-eM-sWb"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2r-eZ-MBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="110"/>
+            <point key="canvasLocation" x="1028" y="109"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="uaV-cu-xtT">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="bmg-U5-4Ks" customClass="SplashViewController" customModule="LoodosMovieClub" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdG-hj-V7p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ffp-FS-mkO" userLabel="Welcome Stack View">
+                                <rect key="frame" x="85" y="291" width="205" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4K-gb-nZL">
+                                        <rect key="frame" x="65.5" y="0.0" width="74.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                        <color key="textColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinema Kulübü" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exi-5h-5Ey">
+                                        <rect key="frame" x="0.0" y="46.5" width="205" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                        <color key="textColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="r4t-0U-G8D" userLabel="No Connection Stack View">
+                                <rect key="frame" x="140.5" y="426" width="94" height="106"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HU7-fI-6ck">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="24"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Bağlantı yok">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="17" name="AvenirNext-Italic"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ripped_reel" translatesAutoresizingMaskIntoConstraints="NO" id="bzi-9N-bwe">
+                                        <rect key="frame" x="7" y="26" width="80" height="80"/>
+                                        <color key="tintColor" red="0.81176470590000005" green="0.81176470590000005" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Kil-Gz-Uqg"/>
+                                            <constraint firstAttribute="width" constant="80" id="gOH-eA-m8V"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="aaj-mg-Tsr"/>
+                                    <constraint firstAttribute="height" constant="106" id="lC6-w6-XhU"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062745098040000002" green="0.062745098040000002" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="r4t-0U-G8D" firstAttribute="centerX" secondItem="cdG-hj-V7p" secondAttribute="centerX" id="C5x-SH-y6u"/>
+                            <constraint firstItem="ffp-FS-mkO" firstAttribute="centerY" secondItem="cdG-hj-V7p" secondAttribute="centerY" id="W8s-Yi-vjg"/>
+                            <constraint firstItem="r4t-0U-G8D" firstAttribute="top" secondItem="ffp-FS-mkO" secondAttribute="bottom" constant="50" id="kWp-9U-0KT"/>
+                            <constraint firstItem="ffp-FS-mkO" firstAttribute="centerX" secondItem="cdG-hj-V7p" secondAttribute="centerX" id="zOM-1c-VOD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ikM-sV-xJ6"/>
+                    </view>
+                    <connections>
+                        <outlet property="companyNameLabel" destination="B4K-gb-nZL" id="edk-p5-P0y"/>
+                        <outlet property="noConnectionStackView" destination="r4t-0U-G8D" id="btT-38-dfz"/>
+                        <segue destination="QVg-KF-T7V" kind="show" id="4RB-z7-6Lk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rzf-nK-eJ8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="108"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ripped_reel" width="155" height="163"/>
+    </resources>
 </document>

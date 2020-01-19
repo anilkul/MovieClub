@@ -3,14 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		21A201130D836F801EB98A3B /* Pods_LoodosMovieClub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495A0425D8983AAB14485126 /* Pods_LoodosMovieClub.framework */; };
 		4E350D1E23D4594A001A1D1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E350D1D23D4594A001A1D1E /* AppDelegate.swift */; };
 		4E350D2023D4594A001A1D1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E350D1F23D4594A001A1D1E /* SceneDelegate.swift */; };
-		4E350D2223D4594A001A1D1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E350D2123D4594A001A1D1E /* ViewController.swift */; };
+		4E350D2223D4594A001A1D1E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E350D2123D4594A001A1D1E /* SplashViewController.swift */; };
 		4E350D2523D4594A001A1D1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E350D2323D4594A001A1D1E /* Main.storyboard */; };
 		4E350D2723D4594E001A1D1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E350D2623D4594E001A1D1E /* Assets.xcassets */; };
 		4E350D2A23D4594E001A1D1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E350D2823D4594E001A1D1E /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		4E350D1A23D4594A001A1D1E /* LoodosMovieClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosMovieClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E350D1D23D4594A001A1D1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E350D1F23D4594A001A1D1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E350D2123D4594A001A1D1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E350D2123D4594A001A1D1E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		4E350D2423D4594A001A1D1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E350D2623D4594E001A1D1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E350D2923D4594E001A1D1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			children = (
 				4E350D1D23D4594A001A1D1E /* AppDelegate.swift */,
 				4E350D1F23D4594A001A1D1E /* SceneDelegate.swift */,
-				4E350D2123D4594A001A1D1E /* ViewController.swift */,
+				4E350D2123D4594A001A1D1E /* SplashViewController.swift */,
 				4E350D2323D4594A001A1D1E /* Main.storyboard */,
 				4E350D2623D4594E001A1D1E /* Assets.xcassets */,
 				4E350D2823D4594E001A1D1E /* LaunchScreen.storyboard */,
@@ -80,7 +80,6 @@
 				CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */,
 				450D4676AEDA9461FA613160 /* Pods-LoodosMovieClub.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,7 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E350D2223D4594A001A1D1E /* ViewController.swift in Sources */,
+				4E350D2223D4594A001A1D1E /* SplashViewController.swift in Sources */,
 				4E350D1E23D4594A001A1D1E /* AppDelegate.swift in Sources */,
 				4E350D2023D4594A001A1D1E /* SceneDelegate.swift in Sources */,
 			);
