@@ -23,7 +23,13 @@ class SplashViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     viewModel = SplashViewModel()
+    configureUI()
     goToHomeScreenIfPossible()
+  }
+  
+  // MARK: - Configuration
+  private func configureUI() {
+    companyNameLabel.text = Constants.Strings.companyName
   }
   
   // MARK: - Navigation
