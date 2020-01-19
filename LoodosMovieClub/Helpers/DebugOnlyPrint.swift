@@ -21,7 +21,7 @@ enum LogType {
   var defaultLog: String {
     switch self {
     case .normal:
-      return Constants.Strings.emptySting
+      return Constants.Strings.emptyString
     case .error:
       return "❌ ERROR: "
     case .complete:

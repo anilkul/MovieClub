@@ -11,7 +11,6 @@ struct Constants {
   
   struct Strings {
     static var companyName: String = RemoteConfigValues.shared.remoteConfigString(for: .companyName)
-    static var emptySting: String = ""
+    static var emptyString: String = ""
   }
-
 }
