@@ -13,4 +13,8 @@ struct Constants {
     static var companyName: String = RemoteConfigValues.shared.remoteConfigString(for: .companyName)
     static var emptyString: String = ""
   }
+  
+  struct URLStrings {
+    static var baseURLString: String = "http://www.omdbapi.com/"
+  }
 }

@@ -28,6 +28,8 @@
 		4EB4DAC723D4714400573589 /* HomeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAC623D4714400573589 /* HomeParser.swift */; };
 		4EB4DACA23D4877700573589 /* MovieSearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAC923D4877700573589 /* MovieSearchResponseModel.swift */; };
 		4EB4DACC23D487D700573589 /* SearchedMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DACB23D487D600573589 /* SearchedMovie.swift */; };
+		4EB4DAD423D4B07200573589 /* RequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAD323D4B07200573589 /* RequestResult.swift */; };
+		4EB4DAD823D4BB9F00573589 /* FailedResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAD723D4BB9F00573589 /* FailedResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		4EB4DAC623D4714400573589 /* HomeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeParser.swift; sourceTree = "<group>"; };
 		4EB4DAC923D4877700573589 /* MovieSearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchResponseModel.swift; sourceTree = "<group>"; };
 		4EB4DACB23D487D600573589 /* SearchedMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedMovie.swift; sourceTree = "<group>"; };
+		4EB4DAD323D4B07200573589 /* RequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResult.swift; sourceTree = "<group>"; };
+		4EB4DAD723D4BB9F00573589 /* FailedResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailedResponseModel.swift; sourceTree = "<group>"; };
 		CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosMovieClub.debug.xcconfig"; path = "Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +157,7 @@
 			children = (
 				4EB4DAA923D4687300573589 /* Firebase */,
 				4EB4DAC123D4706900573589 /* NetworkManager.swift */,
+				4EB4DAD323D4B07200573589 /* RequestResult.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			children = (
 				4EB4DAC923D4877700573589 /* MovieSearchResponseModel.swift */,
 				4EB4DACB23D487D600573589 /* SearchedMovie.swift */,
+				4EB4DAD723D4BB9F00573589 /* FailedResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,7 +286,7 @@
 				4E350D1623D4594A001A1D1E /* Sources */,
 				4E350D1723D4594A001A1D1E /* Frameworks */,
 				4E350D1823D4594A001A1D1E /* Resources */,
-				B9F3A16F2B13E208A772CEF2 /* [CP] Embed Pods Frameworks */,
+				1B9B41E4BE8DE7AE3C1BFFC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -361,7 +367,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9F3A16F2B13E208A772CEF2 /* [CP] Embed Pods Frameworks */ = {
+		1B9B41E4BE8DE7AE3C1BFFC4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,6 +400,8 @@
 				4EB4DAB423D46D1100573589 /* ViewControllerMaker.swift in Sources */,
 				4EB4DAC423D470B300573589 /* HomePageProvider.swift in Sources */,
 				4E350D2023D4594A001A1D1E /* SceneDelegate.swift in Sources */,
+				4EB4DAD823D4BB9F00573589 /* FailedResponseModel.swift in Sources */,
+				4EB4DAD423D4B07200573589 /* RequestResult.swift in Sources */,
 				4EB4DABA23D46DA900573589 /* HomeViewController.swift in Sources */,
 				4EB4DAC723D4714400573589 /* HomeParser.swift in Sources */,
 				4EB4DABD23D46F4200573589 /* HomeManager.swift in Sources */,

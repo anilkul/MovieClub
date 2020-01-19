@@ -17,8 +17,13 @@ class SplashViewModel: SplashViewModelProtocol {
   
   // MARK: - Variables
   var hasConnection: Bool {
-    guard let reachability = Reachability() else { return false }
-    return reachability.connection != .none
+    do {
+      let reachability = try Reachability()
+      return reachability.connection != .unavailable
+    } catch {
+      print(error)
+    }
+    return false
   }
   
 }

@@ -6,7 +6,7 @@ target 'LoodosMovieClub' do
   use_frameworks!
 
   # Pods for LoodosMovieClub
-  pod 'Moya', '~> 13.0'
+  pod 'Alamofire'
   pod 'Kingfisher'
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'

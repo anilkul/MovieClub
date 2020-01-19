@@ -9,18 +9,18 @@
 import Foundation
 
 // MARK: - MovieSearchResponseModel
-struct MovieSearchResponseModel: Codable {
+struct MovieSearchResponseModel: Decodable {
     let searchedMovie: [SearchedMovie]
     let totalResults, response: String
 
     enum CodingKeys: String, CodingKey {
-        case searchedMovie = "search"
+        case searchedMovie = "Search"
         case totalResults
-        case response
+        case response = "Response"
     }
 }
 
-enum TypeEnum: String, Codable {
+enum TypeEnum: String, Decodable {
     case game = "game"
     case movie = "movie"
     case series = "series"

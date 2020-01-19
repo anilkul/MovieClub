@@ -9,16 +9,16 @@
 import Foundation
 
 // MARK: - Search
-struct SearchedMovie: Codable {
+struct SearchedMovie: Decodable {
     let title, year, imdbID: String
     let type: TypeEnum
     let poster: String
 
     enum CodingKeys: String, CodingKey {
-        case title
-        case year
+        case title = "Title"
+        case year = "Year"
         case imdbID
-        case type
-        case poster
+        case type = "Type"
+        case poster = "Poster"
     }
 }
