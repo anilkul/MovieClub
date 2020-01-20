@@ -18,10 +18,6 @@ class MovieCell: BaseCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    self.titleLabel.alpha = 0.0
-    self.yearLabel.alpha = 0.0
-    self.posterImageView.alpha = 0.0
-    self.typeImageView.alpha = 0.0
     configureCell()
   }
   
@@ -38,15 +34,6 @@ class MovieCell: BaseCell {
       self.posterImageView.kf.setImage(with: URL(string: cellViewModel.posterURLString)!, placeholder: UIImage(named: "movie_placeholder")!)
       self.posterImageView.isHidden = self.posterImageView.image == nil
       self.typeImageView.image = UIImage(named: cellViewModel.type)
-    }
-  }
-  
-  func animate() {
-    UIView.animate(withDuration: 2) {
-      self.titleLabel.alpha = 1.0
-      self.yearLabel.alpha = 1.0
-      self.posterImageView.alpha = 1.0
-      self.typeImageView.alpha = 1.0
     }
   }
 }

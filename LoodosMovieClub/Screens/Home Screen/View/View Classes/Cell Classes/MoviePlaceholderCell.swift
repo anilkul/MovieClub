@@ -10,6 +10,8 @@ import UIKit
 
 class MoviePlaceholderCell: BaseCell {
   
+  @IBOutlet var placeholderViews: [UIView]!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
@@ -23,7 +25,7 @@ class MoviePlaceholderCell: BaseCell {
   
   override func willDisplay() {
     super.willDisplay()
-    // Shimmer...
+    placeholderViews.forEach { $0.startShimmering() }
     pageProvider?.loadMore()
   }
   
