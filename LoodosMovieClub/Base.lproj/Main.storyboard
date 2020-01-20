@@ -384,6 +384,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1ly-Iv-tpF"/>
                     </view>
+                    <connections>
+                        <outlet property="actorsLabel" destination="csZ-pl-P9l" id="BAb-nn-UBa"/>
+                        <outlet property="directorLabel" destination="cfg-bm-8bD" id="f9P-bN-FyS"/>
+                        <outlet property="genreLabel" destination="qGb-ry-P6w" id="xcW-3O-qfF"/>
+                        <outlet property="imdbLabel" destination="6dw-rN-YJp" id="8oW-jM-4O5"/>
+                        <outlet property="metacriticLabel" destination="zZe-Zs-aso" id="HGb-de-7iP"/>
+                        <outlet property="plotLabel" destination="SEw-PI-w1p" id="F4c-pj-L4B"/>
+                        <outlet property="posterImageView" destination="iEE-o2-8RA" id="gyB-Oe-ksp"/>
+                        <outlet property="ratedLabel" destination="Xms-Io-Ctf" id="RyY-2q-tfQ"/>
+                        <outlet property="rottenTomatoesLabel" destination="xNe-Mh-5iP" id="otI-Dp-P9F"/>
+                        <outlet property="titleLabel" destination="liQ-uC-zcl" id="a8e-Qj-UGd"/>
+                        <outlet property="typeLabel" destination="G3W-Py-anT" id="t3N-nz-Vh0"/>
+                        <outlet property="writerLabel" destination="qHY-ST-Ufs" id="4q1-LW-mHn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQg-Oh-OQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
