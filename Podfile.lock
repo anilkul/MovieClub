@@ -79,6 +79,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.5.0):
     - GoogleUtilities/Logger
+  - JGProgressHUD (2.1)
   - Kingfisher (5.13.0):
     - Kingfisher/Core (= 5.13.0)
   - Kingfisher/Core (5.13.0)
@@ -95,6 +96,7 @@ DEPENDENCIES:
   - Alamofire
   - Firebase/Core
   - Firebase/RemoteConfig
+  - JGProgressHUD
   - Kingfisher
   - ReachabilitySwift
 
@@ -115,6 +117,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - JGProgressHUD
     - Kingfisher
     - nanopb
     - PromisesObjC
@@ -137,12 +140,13 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 574a983e829327d7c18f2627f65d9e80164ea8a4
   GoogleDataTransportCCTSupport: cad3cd6cdbdbad6b5c2c9206ec413402755faaaa
   GoogleUtilities: f8de7ddf8c706f58e9b405d53e38bbdaa2731e5a
+  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
 
-PODFILE CHECKSUM: 49a96549fad05473646152865c89749e50544b57
+PODFILE CHECKSUM: b1ee19409a03b76fae79843db1982e56d0ab4034
 
 COCOAPODS: 1.7.0.rc.1

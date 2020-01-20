@@ -13,12 +13,15 @@ protocol HomeViewModelProtocol: AnyObject {
   var cellViewModels: [SearchListCellViewModelProtocol] { get set }
   var dataUpdated: VoidHandler? { get set }
   var showAlert: ((_ alertMessage: String) -> Void)? { get set }
+  var toggleLoadingView: ((_ isActive: Bool) -> Void)? { get set }
   
   func cellViewModel(for indexPath: IndexPath) -> SearchListCellViewModelProtocol
   func searchForMovie(with title: String?)
 }
 
 class HomeViewModel: HomeViewModelProtocol {
+  var toggleLoadingView: ((Bool) -> Void)?
+  
   var pageProvider: HomePageProviderProtocol?
   var cellViewModels: [SearchListCellViewModelProtocol]
   var dataUpdated: VoidHandler?

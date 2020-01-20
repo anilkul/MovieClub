@@ -43,7 +43,7 @@ class HomePageProvider: HomePageProviderProtocol {
   
   func newSearch(with title: String) {
     pageIndex = 1
-    print("New Search")
+    viewModel.toggleLoadingView?(true)
     searchForMovie(with: title, on: pageIndex)
   }
   
@@ -52,6 +52,7 @@ class HomePageProvider: HomePageProviderProtocol {
       guard let self = self else { return }
       switch requestResult {
       case .success(let movieSearchResponseModel):
+        self.viewModel.toggleLoadingView?(false)
         self.calculateMaxPage(for: Double(movieSearchResponseModel.totalResults) ?? 1)
         self.searchTerm = title
         DispatchQueue.global(qos: .userInitiated).async {
@@ -62,6 +63,7 @@ class HomePageProvider: HomePageProviderProtocol {
           self.viewModel.dataUpdated?()
         }
       case .failure(let error):
+        self.viewModel.toggleLoadingView?(false)
         self.viewModel.showAlert?(error.description)
         printInDebug(error.description, type: .error)
       }
