@@ -13,9 +13,9 @@ extension HomeViewModel.ResultView {
   var cellHeight: CGFloat {
     switch self {
     case .result:
-      return 100
+      return 130
     case .placeholder:
-      return 100
+      return 130
     }
   }
 }

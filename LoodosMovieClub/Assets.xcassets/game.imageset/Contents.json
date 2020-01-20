@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ripped_reel.png",
+      "filename" : "game.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ripped_reel-1.png",
+      "filename" : "game-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ripped_reel-2.png",
+      "filename" : "game-2.png",
       "scale" : "3x"
     }
   ],

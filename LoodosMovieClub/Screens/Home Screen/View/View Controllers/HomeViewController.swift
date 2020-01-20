@@ -27,12 +27,6 @@ class HomeViewController: BaseViewController {
     manager.viewModel.showAlert = showAlert()
     manager.viewModel.toggleLoadingView = toggleLoadingView()
     super.viewDidLoad()
-    
-//    hud.show(in: self.view)
-//    hud.dismiss(afterDelay: 10.0)
-//    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-//      self.dismiss(animated: true)
-//    }
   }
   
   func reloadData() -> VoidHandler {
@@ -43,15 +37,6 @@ class HomeViewController: BaseViewController {
       }
     }
   }
-  
-//  func toggleLoadingView() -> (Bool) -> Void {
-//    return { [weak self] isActive in
-//      guard let self = self else { return }
-//      DispatchQueue.main.async {
-//        isActive ? self.loadingView.show(in: self.view) : self.loadingView.dismiss()
-//      }
-//    }
-//  }
   
   func showAlert() -> (String) -> Void {
     return { [weak self] alertMessage in

@@ -43,6 +43,8 @@
 		4EB4DAF723D4FAEA00573589 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAF623D4FAEA00573589 /* UITableViewCell+Extensions.swift */; };
 		4EB4DAF923D5156200573589 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DAF823D5156200573589 /* Array+Extensions.swift */; };
 		4EB4DB0423D5B57500573589 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DB0323D5B57500573589 /* BaseViewController.swift */; };
+		4EB4DB0623D5BEFC00573589 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DB0523D5BEFC00573589 /* UIView+Extensions.swift */; };
+		4EEB443923D5CFC20099256C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB443823D5CFC20099256C /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		4EB4DAF623D4FAEA00573589 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		4EB4DAF823D5156200573589 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		4EB4DB0323D5B57500573589 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4EB4DB0523D5BEFC00573589 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		4EEB443823D5CFC20099256C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosMovieClub.debug.xcconfig"; path = "Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -333,6 +337,8 @@
 			children = (
 				4EB4DAF623D4FAEA00573589 /* UITableViewCell+Extensions.swift */,
 				4EB4DAF823D5156200573589 /* Array+Extensions.swift */,
+				4EB4DB0523D5BEFC00573589 /* UIView+Extensions.swift */,
+				4EEB443823D5CFC20099256C /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,6 +490,8 @@
 				4EB4DAF323D4EFE600573589 /* MoviePlaceholderCell.swift in Sources */,
 				4EB4DAC023D46FE100573589 /* HomeViewModel.swift in Sources */,
 				4E350D2223D4594A001A1D1E /* SplashViewController.swift in Sources */,
+				4EEB443923D5CFC20099256C /* UIColor+Extensions.swift in Sources */,
+				4EB4DB0623D5BEFC00573589 /* UIView+Extensions.swift in Sources */,
 				4E350D1E23D4594A001A1D1E /* AppDelegate.swift in Sources */,
 				4EB4DAB423D46D1100573589 /* ViewControllerMaker.swift in Sources */,
 				4EB4DAC423D470B300573589 /* HomePageProvider.swift in Sources */,
