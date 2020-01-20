@@ -16,6 +16,11 @@ protocol HomeManagerProtocol: AnyObject {
 }
 
 class HomeManager: HomeManagerProtocol {
+  
+  init() {
+    viewModel.pageProvider = pageProvider
+  }
+  
   lazy var viewModel: HomeViewModelProtocol = {
     return HomeViewModel()
   }()

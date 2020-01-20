@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol MovieCellViewModelProtocol {
   var title: String { get set }
@@ -29,5 +30,7 @@ class MovieCellViewModel: SearchListCellViewModel, MovieCellViewModelProtocol {
     self.imdbID = imdbID
     self.type = type
     self.posterURLString = posterURLString
+    super.init()
+    self.cellType = HomeViewModel.CellType.resultView(.result)
   }
 }

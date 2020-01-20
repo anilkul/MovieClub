@@ -50,7 +50,8 @@ final class NetworkManager: NetworkManagerProtocol {
       return .success(responseModel)
     } catch {
       let failedResponseMessage = decodedFailedResponse(from: data)?.error ?? Constants.Strings.emptyString
-      return .failure(.custom("Failed response message: \(failedResponseMessage)\nError:\(error.localizedDescription)"))
+      printInDebug("Error:\(error.localizedDescription)", type: .error)
+      return .failure(.custom(failedResponseMessage))
     }
   }
   

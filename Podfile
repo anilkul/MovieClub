@@ -11,4 +11,5 @@ target 'LoodosMovieClub' do
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
   pod 'ReachabilitySwift'
+  
 end

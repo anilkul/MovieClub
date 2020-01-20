@@ -10,9 +10,10 @@ import UIKit
 
 class MovieCell: BaseCell {
   
+  @IBOutlet weak var label: UILabel!
   override func awakeFromNib() {
     super.awakeFromNib()
-    // Initialization code
+    configureCell()
   }
   
   func configureCell() {
@@ -22,8 +23,7 @@ class MovieCell: BaseCell {
         printInDebug(Constants.Strings.emptyString, type: .error)
         fatalError("Cell: \(String(describing: self)) is not convertable")
       }
-      
+      self.label.text = cellViewModel.title
     }
   }
-  
 }

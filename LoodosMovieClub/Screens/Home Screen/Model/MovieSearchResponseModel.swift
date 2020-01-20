@@ -10,11 +10,11 @@ import Foundation
 
 // MARK: - MovieSearchResponseModel
 struct MovieSearchResponseModel: Decodable {
-    let searchedMovie: [SearchedMovie]
+    let searchedMovies: [SearchedMovie]
     let totalResults, response: String
 
     enum CodingKeys: String, CodingKey {
-        case searchedMovie = "Search"
+        case searchedMovies = "Search"
         case totalResults
         case response = "Response"
     }

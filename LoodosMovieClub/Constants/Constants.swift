@@ -7,6 +7,8 @@
 //
 
 import Foundation
+
+// MARK: - Constants
 struct Constants {
   
   struct Strings {
@@ -15,6 +17,9 @@ struct Constants {
   }
   
   struct URLStrings {
-    static var baseURLString: String = "http://www.omdbapi.com/"
+    static var baseURLString: String = "https://www.omdbapi.com/"
   }
 }
+
+// MARK: - Typealiases
+typealias VoidHandler = () -> Void

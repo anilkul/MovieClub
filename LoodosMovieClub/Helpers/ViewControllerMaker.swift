@@ -30,15 +30,4 @@ class ViewControllerMaker {
     viewController.manager = HomeManager()
     return viewController
   }
-  
-//  static var homeViewController: HomeViewController {
-//    guard let viewController = defineViewController(with: Identifier.home.rawValue) as? HomeViewController else { return HomeViewController() }
-//    return viewController
-//  }
-//
-//  static func makeHomeViewController() -> HomeViewController {
-//    let manager = HomeManager()
-//    let viewController = HomeViewController.initialize(manager: manager)
-//    return viewController
-//  }
 }
