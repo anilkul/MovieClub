@@ -15,8 +15,6 @@ class HomeViewController: BaseViewController {
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var tableView: UITableView!
   
-  
-  
   override func viewDidLoad() {
     tableView.dataSource = self
     tableView.delegate = self
@@ -26,6 +24,7 @@ class HomeViewController: BaseViewController {
     manager.viewModel.dataUpdated = reloadData()
     manager.viewModel.showAlert = showAlert()
     manager.viewModel.toggleLoadingView = toggleLoadingView()
+    manager.viewModel.showMovieDetail = showMovieDetail()
     super.viewDidLoad()
   }
   
@@ -46,6 +45,16 @@ class HomeViewController: BaseViewController {
         let alertAction = UIAlertAction(title: "OK", style: .default)
         alertVC.addAction(alertAction)
         self.present(alertVC, animated: true, completion: nil)
+      }
+    }
+  }
+  
+  func showMovieDetail() -> (String) -> Void {
+    return { [weak self] imdbID in
+      guard let self = self else { return }
+      DispatchQueue.main.async {
+        let viewController = ViewControllerMaker.detailViewController(for: imdbID)
+        self.show(viewController, sender: nil)
       }
     }
   }
@@ -76,6 +85,10 @@ extension HomeViewController: UITableViewDataSource {
 }
 
 extension HomeViewController: UITableViewDelegate {
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    manager.viewModel.showDetail(for: indexPath)
+  }
   
   func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
     let cellViewModel = manager.viewModel.cellViewModel(for: indexPath)

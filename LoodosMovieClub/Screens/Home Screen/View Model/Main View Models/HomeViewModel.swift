@@ -14,12 +14,14 @@ protocol HomeViewModelProtocol: AnyObject {
   var dataUpdated: VoidHandler? { get set }
   var showAlert: ((_ alertMessage: String) -> Void)? { get set }
   var toggleLoadingView: ((_ isActive: Bool) -> Void)? { get set }
-  
+  var showMovieDetail: ((_ imdbID: String) -> Void)? { get set }
   func cellViewModel(for indexPath: IndexPath) -> SearchListCellViewModelProtocol
   func searchForMovie(with title: String?)
+  func showDetail(for indexPath: IndexPath)
 }
 
 class HomeViewModel: HomeViewModelProtocol {
+  var showMovieDetail: ((String) -> Void)?
   var toggleLoadingView: ((Bool) -> Void)?
   
   var pageProvider: HomePageProviderProtocol?
@@ -44,5 +46,10 @@ class HomeViewModel: HomeViewModelProtocol {
   
   func cellViewModel(for indexPath: IndexPath) -> SearchListCellViewModelProtocol {
     return cellViewModels[safe: indexPath.row] ?? SearchListCellViewModel()
+  }
+  
+  func showDetail(for indexPath: IndexPath) {
+    guard let selectedCellViewModel = cellViewModel(for: indexPath) as? MovieCellViewModelProtocol else { return }
+    showMovieDetail?(selectedCellViewModel.imdbID)
   }
 }

@@ -45,6 +45,8 @@
 		4EB4DB0423D5B57500573589 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DB0323D5B57500573589 /* BaseViewController.swift */; };
 		4EB4DB0623D5BEFC00573589 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4DB0523D5BEFC00573589 /* UIView+Extensions.swift */; };
 		4EEB443923D5CFC20099256C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB443823D5CFC20099256C /* UIColor+Extensions.swift */; };
+		4EEB444023D5E5FC0099256C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB443F23D5E5FC0099256C /* DetailViewModel.swift */; };
+		4EEB444323D5E6D90099256C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEB444223D5E6D90099256C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		4EB4DB0323D5B57500573589 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		4EB4DB0523D5BEFC00573589 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		4EEB443823D5CFC20099256C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		4EEB443F23D5E5FC0099256C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		4EEB444223D5E6D90099256C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CE60973DA29C9F7F86D12214 /* Pods-LoodosMovieClub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoodosMovieClub.debug.xcconfig"; path = "Target Support Files/Pods-LoodosMovieClub/Pods-LoodosMovieClub.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +149,7 @@
 		4E350D3123D45EC5001A1D1E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4EEB443A23D5E56F0099256C /* Detail Screen */,
 				4EB4DAB523D46D6100573589 /* Home Screen */,
 				4E350D3223D45ED1001A1D1E /* Splash Screen */,
 			);
@@ -221,7 +226,7 @@
 		4EB4DAB523D46D6100573589 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				4EB4DAC323D470B300573589 /* HomePageProvider.swift */,
+				4EEB443E23D5E5B20099256C /* Network Operators */,
 				4EB4DAC823D486BD00573589 /* Model */,
 				4EB4DABE23D46FCF00573589 /* View Model */,
 				4EB4DABB23D46F3100573589 /* General */,
@@ -341,6 +346,55 @@
 				4EEB443823D5CFC20099256C /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EEB443A23D5E56F0099256C /* Detail Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4EEB443D23D5E58B0099256C /* View */,
+				4EEB443C23D5E5860099256C /* General */,
+				4EEB443B23D5E57E0099256C /* View Model */,
+			);
+			path = "Detail Screen";
+			sourceTree = "<group>";
+		};
+		4EEB443B23D5E57E0099256C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EEB443F23D5E5FC0099256C /* DetailViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		4EEB443C23D5E5860099256C /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		4EEB443D23D5E58B0099256C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4EEB444123D5E6C80099256C /* View Controllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EEB443E23D5E5B20099256C /* Network Operators */ = {
+			isa = PBXGroup;
+			children = (
+				4EB4DAC323D470B300573589 /* HomePageProvider.swift */,
+			);
+			path = "Network Operators";
+			sourceTree = "<group>";
+		};
+		4EEB444123D5E6C80099256C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4EEB444223D5E6D90099256C /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		7C5BC53D183DBD3BA39D0761 /* Pods */ = {
@@ -478,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EEB444323D5E6D90099256C /* DetailViewController.swift in Sources */,
 				4EB4DACA23D4877700573589 /* MovieSearchResponseModel.swift in Sources */,
 				4EB4DAC223D4706900573589 /* NetworkManager.swift in Sources */,
 				4EB4DAAB23D468B900573589 /* RemoteConfigValues.swift in Sources */,
@@ -493,6 +548,7 @@
 				4EEB443923D5CFC20099256C /* UIColor+Extensions.swift in Sources */,
 				4EB4DB0623D5BEFC00573589 /* UIView+Extensions.swift in Sources */,
 				4E350D1E23D4594A001A1D1E /* AppDelegate.swift in Sources */,
+				4EEB444023D5E5FC0099256C /* DetailViewModel.swift in Sources */,
 				4EB4DAB423D46D1100573589 /* ViewControllerMaker.swift in Sources */,
 				4EB4DAC423D470B300573589 /* HomePageProvider.swift in Sources */,
 				4E350D2023D4594A001A1D1E /* SceneDelegate.swift in Sources */,

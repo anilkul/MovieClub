@@ -30,4 +30,14 @@ class ViewControllerMaker {
     viewController.manager = HomeManager()
     return viewController
   }
+  
+  static func detailViewController(for imdbID: String) -> DetailViewController {
+    guard let viewController = defineViewController(with: Identifier.detail.rawValue) as? DetailViewController else {
+      return DetailViewController() }
+    let networkManager = NetworkManager()
+    let viewModel = DetailViewModel(imdbID: imdbID, networkManager: networkManager)
+    viewController.viewModel = viewModel
+    return viewController
+    }
+
 }
