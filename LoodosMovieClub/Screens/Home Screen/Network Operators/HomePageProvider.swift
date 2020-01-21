@@ -9,18 +9,24 @@
 import Foundation
 
 protocol HomePageProviderProtocol {
+  /// - Variables
   var networkManager: NetworkManagerProtocol { get }
   var parser: HomeParserProtocol { get }
+  
+  /// - Functions
   func searchForMovie(with title: String, on page: Int)
   func newSearch(with title: String)
   func loadMore()
 }
 
 class HomePageProvider: HomePageProviderProtocol {
+  // MARK: - Variables
+  /// - Public Variables
   weak var viewModel: HomeViewModelProtocol!
   var networkManager: NetworkManagerProtocol
   var parser: HomeParserProtocol
   
+  /// - Private Variables
   private var pageIndex: Int
   private var searchTerm: String
   private var pageSize: Double
@@ -30,19 +36,14 @@ class HomePageProvider: HomePageProviderProtocol {
     self.viewModel = viewModel
     self.networkManager = networkManager
     self.parser = parser
-    pageIndex = 1
+    pageIndex = PrivateConstants.pageIndexInitialValue
     searchTerm = Constants.Strings.emptyString
-    pageSize = 10
-    maxPage = 1
-    print(" |||||| \(String(describing: self)) initialized")
-  }
-  
-  deinit {
-    print(" *** \(String(describing: self)) deninitialized")
+    pageSize = PrivateConstants.defaultPageSize
+    maxPage = PrivateConstants.maxPageInitialValue
   }
   
   func newSearch(with title: String) {
-    pageIndex = 1
+    pageIndex = PrivateConstants.pageIndexInitialValue
     viewModel.toggleLoadingView?(true)
     searchForMovie(with: title, on: pageIndex)
   }
@@ -52,8 +53,7 @@ class HomePageProvider: HomePageProviderProtocol {
       guard let self = self else { return }
       switch requestResult {
       case .success(let movieSearchResponseModel):
-        self.viewModel.toggleLoadingView?(false)
-        self.calculateMaxPage(for: Double(movieSearchResponseModel.totalResults) ?? 1)
+        self.calculateMaxPage(for: Double(movieSearchResponseModel.totalResults) ?? Double(PrivateConstants.maxPageInitialValue))
         self.searchTerm = title
         DispatchQueue.global(qos: .userInitiated).async {
           self.viewModel.cellViewModels.append(contentsOf: self.parser.parseSearchedMovies(searchedMovies: movieSearchResponseModel.searchedMovies))
@@ -70,13 +70,23 @@ class HomePageProvider: HomePageProviderProtocol {
     }
   }
   
+  func loadMore() {
+    pageIndex += PrivateConstants.pageIndexIncrementalValue
+    viewModel.cellViewModels.removeLast()
+    searchForMovie(with: searchTerm, on: pageIndex)
+  }
+  
+  // MARK: - Helper Functions
   func calculateMaxPage(for totalResults: Double) {
     maxPage = Int(ceil(totalResults / pageSize))
   }
-  
-  func loadMore() {
-    pageIndex += 1
-    viewModel.cellViewModels.removeLast()
-    searchForMovie(with: searchTerm, on: pageIndex)
+}
+
+extension HomePageProvider {
+  struct PrivateConstants {
+    static let maxPageInitialValue: Int = 1
+    static let pageIndexInitialValue: Int = 1
+    static let pageIndexIncrementalValue: Int = 1
+    static let defaultPageSize: Double = 10
   }
 }

@@ -24,7 +24,7 @@ class BaseCell: UITableViewCell, BaseTableViewCellProtocol {
   func configureCell(with cellViewModel: SearchListCellViewModelProtocol, for indexPath: IndexPath) {
     self.indexPath = indexPath
     self.cellViewModel = cellViewModel
-    
+    self.selectionStyle = .none
     do {
       try self.workerBlock?(cellViewModel)
     } catch {

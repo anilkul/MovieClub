@@ -11,23 +11,17 @@ import Alamofire
 
 protocol NetworkManagerProtocol {
   func requestSearch(for movieTitle: String, on page: Int, completion: @escaping (RequestResult<MovieSearchResponseModel, CustomError>) -> Void)
+  func requestDetail(for imdbID: String, completion: @escaping (RequestResult<MovieDetailResponseModel, CustomError>) -> Void)
 }
 
 final class NetworkManager: NetworkManagerProtocol {
-  
-  init() {
-    print(" |||||| \(String(describing: self)) initialized")
-  }
-  
-  deinit {
-    print(" *** \(String(describing: self)) deninitialized")
-  }
-  
-  private let defaultParams: [String: Any] = ["apikey": "295c53d4"]
+
+  private let defaultParams: [String: Any] = [NetworkParameter.apiKey.key: NetworkParameter.apiKey.apikeyValue]
   private let decoder = JSONDecoder()
   
+  // MARK: - Requests
   func requestSearch(for movieTitle: String, on page: Int, completion: @escaping (RequestResult<MovieSearchResponseModel, CustomError>) -> Void) {
-    let params: [String: Any] = ["s": movieTitle, "page": page]
+    let params: [String: Any] = [NetworkParameter.searchTitle.key: movieTitle, NetworkParameter.page.key: page]
     let mergedParams = params.merging(defaultParams) { $1 }
     
     Alamofire.request(Constants.URLStrings.baseURLString, method: .get, parameters: mergedParams, encoding: URLEncoding.default).responseJSON { [unowned self] (response) in
@@ -44,6 +38,25 @@ final class NetworkManager: NetworkManagerProtocol {
     }
   }
   
+  func requestDetail(for imdbID: String, completion: @escaping (RequestResult<MovieDetailResponseModel, CustomError>) -> Void) {
+    let params: [String: Any] = [NetworkParameter.imdbID.key: imdbID]
+    let mergedParams = params.merging(defaultParams) { $1 }
+    
+    Alamofire.request(Constants.URLStrings.baseURLString, method: .get, parameters: mergedParams, encoding: URLEncoding.default).responseJSON { [unowned self] (response) in
+      guard response.result.isSuccess else {
+        completion(.failure(.responseFailure))
+        return
+      }
+      
+      guard let responseData = response.data  else {
+          completion(.failure(.responseUnavailable))
+          return
+      }
+      completion(self.decodeResponse(from: responseData, for: MovieDetailResponseModel.self))
+    }
+  }
+  
+  // MARK: - Decoding
   private func decodeResponse<T: Decodable>(from data: Data, for type: T.Type) -> RequestResult<T, CustomError> {
     do {
       let responseModel = try decoder.decode(T.self, from: data)
@@ -64,22 +77,27 @@ final class NetworkManager: NetworkManagerProtocol {
       return nil
     }
   }
-}
-
-enum CustomError: Error, CustomStringConvertible {
-    case responseFailure
-    case responseUnavailable
-    case custom(String)
+  
+  // MARK: -
+  private enum NetworkParameter {
+    case searchTitle, imdbID, page, apiKey
     
-    
-    var description: String {
-        switch self {
-        case .responseFailure:
-            return "ERROR: Could not get server response"
-        case .responseUnavailable:
-            return "ERROR: Response data is unavailable"
-        case .custom(let error):
-            return "\(error)"
-        }
+    var key: String {
+      switch self {
+      case .searchTitle:
+        return "s"
+      case .imdbID:
+        return "i"
+      case .page:
+        return "page"
+      case .apiKey:
+        return "apiKey"
+      }
     }
+    
+    var apikeyValue: String {
+      return "295c53d4"
+    }
+  }
+  
 }

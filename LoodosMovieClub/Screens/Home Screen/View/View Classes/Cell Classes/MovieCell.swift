@@ -31,7 +31,7 @@ class MovieCell: BaseCell {
       self.titleLabel.text = cellViewModel.title
       self.yearLabel.text = cellViewModel.year
       self.posterImageView.kf.indicatorType = .activity
-      self.posterImageView.kf.setImage(with: URL(string: cellViewModel.posterURLString)!, placeholder: UIImage(named: "movie_placeholder")!)
+      self.posterImageView.kf.setImage(with: URL(string: cellViewModel.posterURLString)!, placeholder: Constants.Images.moviePlaceholder)
       self.posterImageView.isHidden = self.posterImageView.image == nil
       self.typeImageView.image = UIImage(named: cellViewModel.type)
     }

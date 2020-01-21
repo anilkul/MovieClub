@@ -10,58 +10,52 @@ import UIKit
 
 class HomeViewController: BaseViewController {
   
-  var manager: HomeManagerProtocol!
+  // MARK: - Variables
+  /// - Public Variables
   
+  var manager: HomeManagerProtocol!
+  /// - IBOutlets
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var tableView: UITableView!
   
+  // MARK: - Lifecycle
   override func viewDidLoad() {
-    tableView.dataSource = self
-    tableView.delegate = self
-    searchBar.delegate = self
-    tableView.register(UINib(nibName:"MovieCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
-    tableView.register(UINib(nibName:"MoviePlaceholderCell", bundle: nil), forCellReuseIdentifier: "MoviePlaceholderCell")
+    super.viewDidLoad()
+    configureUI()
+    bindViewModel()
+  }
+  
+  // MARK: - Binding
+  private func bindViewModel() {
     manager.viewModel.dataUpdated = reloadData()
     manager.viewModel.showAlert = showAlert()
     manager.viewModel.toggleLoadingView = toggleLoadingView()
     manager.viewModel.showMovieDetail = showMovieDetail()
-    super.viewDidLoad()
   }
   
-  func reloadData() -> VoidHandler {
-    return { [weak self] in
-      DispatchQueue.main.async {
-        guard let self = self else { return }
-        self.tableView.reloadData()
-      }
+  // MARK: - UI
+  private func configureUI() {
+    /// Table View
+    tableView.dataSource = self
+    tableView.delegate = self
+    tableView.keyboardDismissMode = .onDrag
+    tableView.contentInset = UIEdgeInsets(top: PrivateConstants.tableViewTopInset,
+                                          left: PrivateConstants.tableViewLeftInset,
+                                          bottom: PrivateConstants.tableViewBottomInset,
+                                          right: PrivateConstants.tableViewRightInset)
+    
+    HomeViewModel.CellType.allCases.forEach { (cellType) in
+      tableView.register(UINib(nibName: cellType.identifier, bundle: nil), forCellReuseIdentifier: cellType.identifier)
     }
-  }
-  
-  func showAlert() -> (String) -> Void {
-    return { [weak self] alertMessage in
-      DispatchQueue.main.async {
-        guard let self = self else { return }
-        let alertVC = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "OK", style: .default)
-        alertVC.addAction(alertAction)
-        self.present(alertVC, animated: true, completion: nil)
-      }
-    }
-  }
-  
-  func showMovieDetail() -> (String) -> Void {
-    return { [weak self] imdbID in
-      guard let self = self else { return }
-      DispatchQueue.main.async {
-        let viewController = ViewControllerMaker.detailViewController(for: imdbID)
-        self.show(viewController, sender: nil)
-      }
-    }
+    
+    /// Search Bar
+    searchBar.delegate = self
   }
 }
 
 extension HomeViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.resignFirstResponder()
     manager.viewModel.searchForMovie(with: searchBar.text)
   }
 }
@@ -105,4 +99,47 @@ extension HomeViewController: UITableViewDelegate {
     cell?.willDisplay()
   }
   
+}
+
+extension HomeViewController {
+  func reloadData() -> VoidHandler {
+    return { [weak self] in
+      DispatchQueue.main.async {
+        guard let self = self else { return }
+        self.loadingView.dismiss()
+        self.tableView.reloadData()
+      }
+    }
+  }
+  
+  func showAlert() -> (String) -> Void {
+    return { [weak self] alertMessage in
+      DispatchQueue.main.async {
+        guard let self = self else { return }
+        let alertVC = UIAlertController(title: Constants.Strings.alertTitle, message: alertMessage, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: Constants.Strings.alertActionTitle, style: .default)
+        alertVC.addAction(alertAction)
+        self.present(alertVC, animated: true, completion: nil)
+      }
+    }
+  }
+  
+  func showMovieDetail() -> (String) -> Void {
+    return { [weak self] imdbID in
+      guard let self = self else { return }
+      DispatchQueue.main.async {
+        let viewController = ViewControllerMaker.detailViewController(for: imdbID)
+        self.show(viewController, sender: nil)
+      }
+    }
+  }
+}
+
+extension HomeViewController {
+  struct PrivateConstants {
+    static let tableViewTopInset: CGFloat = 50
+    static let tableViewLeftInset: CGFloat = 0
+    static let tableViewBottomInset: CGFloat = 50
+    static let tableViewRightInset: CGFloat = 0
+  }
 }

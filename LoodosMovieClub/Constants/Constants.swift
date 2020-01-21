@@ -7,19 +7,52 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Constants
 struct Constants {
   
+  // MARK: - Strings
   struct Strings {
-    static var companyName: String = RemoteConfigValues.shared.remoteConfigString(for: .companyName)
-    static var emptyString: String = ""
+    /// - General
+    static let emptyString: String = ""
+    
+    /// - Remote Config
+    static let companyName: String = RemoteConfigValues.shared.remoteConfigString(for: .companyName)
+    
+    /// - Awards
+    static let wonString = "Won "
+    static let oscarString = " Oscars"
+    static let goldenGlobeString = " Golden Globes"
+    
+    /// - Animation
+    static let labelFormat = "%.1f"
+    static let loadingText = "Loading"
+    
+    /// - Alert
+    static let alertTitle = "Error"
+    static let alertActionTitle = "OK"
   }
   
-  struct URLStrings {
-    static var baseURLString: String = "https://www.omdbapi.com/"
+  // MARK: - Images
+  struct Images {
+    static let emptyImage: UIImage = UIImage()
+    static let moviePlaceholder: UIImage = UIImage(named: "movie_placeholder")!
   }
+  
+  // MARK: - URLStrings
+  struct URLStrings {
+    static let baseURLString: String = "https://www.omdbapi.com/"
+  }
+  
+  // MARK: - Colors
+  struct Colors {
+    static let defaultTextColor: UIColor = UIColor(hexString: "#CFCFCF")
+  }
+  
 }
 
 // MARK: - Typealiases
 typealias VoidHandler = () -> Void
+typealias BoolHandler = (Bool) -> Void
+typealias StringHandler = (String) -> Void

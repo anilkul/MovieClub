@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     FirebaseApp.configure()
     let _ = RemoteConfigValues.shared
+    
+    let pushManager = PushNotificationManager(userID: "currently_logged_in_user_id")
+    pushManager.registerForPushNotifications()
+    
+    let sender = PushNotificationSender()
+    sender.sendPushNotification(to: "token", title: "Notification title", body: "Notification body")
+    
     return true
   }
 

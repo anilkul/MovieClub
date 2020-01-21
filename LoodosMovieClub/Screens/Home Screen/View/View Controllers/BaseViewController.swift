@@ -11,16 +11,15 @@ import JGProgressHUD
 
 class BaseViewController: UIViewController {
   
-  private var loadingView: JGProgressHUD!
+  var loadingView: JGProgressHUD!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     loadingView = JGProgressHUD(style: .dark)
-    loadingView.textLabel.text = "Loading"
-    // Do any additional setup after loading the view.
+    loadingView.textLabel.text = Constants.Strings.loadingText
   }
   
-  func toggleLoadingView() -> (Bool) -> Void {
+  func toggleLoadingView() -> BoolHandler {
     return { [weak self] isActive in
       guard let self = self else { return }
       DispatchQueue.main.async {

@@ -30,12 +30,4 @@ class HomeParser: HomeParserProtocol {
                               type: searchedMovie.type.rawValue,
                               posterURLString: searchedMovie.poster)
   }
-  
-  init() {
-    print(" |||||| \(String(describing: self)) initialized")
-  }
-  
-  deinit {
-    print(" *** \(String(describing: self)) deninitialized")
-  }
 }

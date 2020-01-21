@@ -10,6 +10,10 @@ target 'LoodosMovieClub' do
   pod 'Kingfisher'
   pod 'Firebase/Core'
   pod 'Firebase/RemoteConfig'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
   pod 'ReachabilitySwift'
   pod 'JGProgressHUD'
+  pod 'EFCountingLabel', '5.0.0'
 end
